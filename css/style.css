@@ -1,0 +1,51 @@
+:root {
+    /* - Orange: hsl(26, 100%, 55%) */
+    --clr-primary-100: hsl(26, 100%, 55%);
+    /* - Pale orange: hsl(25, 100%, 94%) */
+    --clr-primary--200: hsl(25, 100%, 94%);
+    /* - Very dark blue: hsl(220, 13%, 13%) */
+    --clr-neutral-100: hsl(220, 13%, 13%);
+    /* - Dark grayish blue: hsl(219, 9%, 45%) */
+    --clr-neutral-200: hsl(219, 9%, 45%);
+    /* - Grayish blue: hsl(220, 14%, 75%) */
+    --clr-neutral-300: hsl(220, 14%, 75%);
+    /* - Light grayish blue: hsl(223, 64%, 98%) */
+    --clr-neutral-300: hsl(223, 64%, 98%);
+
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-lightboxBG: hsla(0, 0%, 0%, 0.75);
+
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --fs-16: 16px;
+}
+
+/* - Mobile: 375px
+- Desktop: 1440px
+- Font size (paragraph): 16px
+ */
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.productTitle {
+    color: orange;
+    font-size: var(--fs-16);
+}
+
+p {
+    font-size: var(--fs-16);
+}
+
+.innercontainer {
+    display: flex;
+    gap: 2rem;
+}
+
+.image {
+    width: 50%;
+}

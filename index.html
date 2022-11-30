@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/cat.jpg">
+  <title>Sneakers</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container">
+
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="images/icon-menu.svg" alt="open menu">
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img src="images/logo.svg" alt="Sneakers">
+        </a>
+
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <div class="dropdown">
+          <!-- Cart Icon -->
+          <a class="text-reset me-3" href="#">
+            <img aria-label="View your cart" src="images/icon-cart.svg" alt="cart icon">
+          </a>
+
+          <!-- Dropdown Cart -->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <h3>Cart</h3>
+            <ul>
+              <li>
+                <p>Img here</p>
+                <p>item one</p>
+                <p>price</p>
+                <img src="images/icon-delete.svg" alt="">
+              </li>
+            </ul>
+            <button>checkout</button>
+          </div>
+          <!-- Dropdown Cart -->
+        </div>
+
+        <!-- Avatar -->
+        <img src="images/image-avatar.png" alt="Your profile" class="rounded-circle" height="30">
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+  <main class="container">
+    <div class="innercontainer">
+      <!-- eCommerce gallery -->
+      <section class="image">
+        <div class="ecommerce-gallery" data-toggle="modal">
+          <div class="row py-3 shadow-5">
+            <div class="col-12 mb-1">
+              <!-- Gallery Image  -->
+              <div class="lightbox">
+                <img src="images/image-product-1.jpg" alt="Gallery image 1"
+                  class="ecommerce-gallery-main-img active w-100" />
+              </div>
+            </div>
+            <!-- Thumbnails -->
+            <div class="col-3 mt-1">
+              <img src="images/image-product-1.jpg" data-mdb-img="images/image-product-1.jpg" alt="Gallery image 1"
+                class="active w-100" />
+            </div>
+            <div class="col-3 mt-1">
+              <img src="images//image-product-2.jpg" data-mdb-img="images//image-product-2.jpg" alt="Gallery image 2"
+                class="w-100" />
+            </div>
+            <div class="col-3 mt-1">
+              <img src="images/image-product-3.jpg" data-mdb-img="images/image-product-3.jpg" alt="Gallery image 3"
+                class="w-100" />
+            </div>
+            <div class="col-3 mt-1">
+              <img src="images/image-product-4.jpg" data-mdb-img="images/image-product-4.jpg" alt="Gallery image 4"
+                class="w-100" />
+            </div>
+            <!-- Thumbnails -->
+          </div>
+        </div>
+      </section>
+      <!-- eCommerce gallery -->
+
+      <!-- Pitch  -->
+      <section class="pitch">
+        <div>
+          <h2 class="productTitle">Sneaker Company</h2>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they`ll withstand everything the weather can offer.
+          </p>
+        </div>
+
+        <div class="product-actual-price">$125.00</div>
+        <div class="product-discount">50%</div>
+        <div class="product-actual-price">$250.00</div>
+        <!-- Add Product -->
+        <button type="button">+</button>
+        <input type="number" placeholder="0">
+        <button type="button">-</button>
+        <button>
+          <img src="images/icon-cart.svg" alt="Cart icon">
+          Add to cart
+        </button>
+        <!-- Add Product -->
+      </section>
+    </div>
+  </main>
+  <!-- Pitch  -->
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i> Sneaker Company
+            </h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, necessitatibus. Officiis molestiae porro
+              hic, tempore, aliquid dolores eius voluptas unde at.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">String Sneakers</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Fall Sneakers</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Winter Sneakers</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Summer Sneakers</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><img src="images/location.svg" alt="location" height="25"> New York, NY 10012, US</p>
+            <p>
+              <img src="images/mail.svg" alt="mail" height="25">
+              info@example.com
+            </p>
+            <p><img src="images/phone.svg" alt="call" height="25"> + 01 234 567 88</p>
+            <p><img src="images/fax.svg" alt="fax" height="25"> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/000xzhou">XZ</a>.
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</body>
+
+</html>
