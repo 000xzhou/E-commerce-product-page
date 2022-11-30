@@ -78,12 +78,14 @@ input::-webkit-inner-spin-button {
     color: var(--clr-neutral-300);
     padding: 1rem 3rem;
     margin-left: 1rem;
+    border: 4px solid var(--clr-primary-100);
 }
 
 .cart-btn img {
     /* font-size: 13px; */
     float: left;
     padding-right: 1rem;
+    filter: brightness(3);
 }
 
 .product-discount-price {
@@ -105,8 +107,60 @@ input::-webkit-inner-spin-button {
     color: var(--clr-neutral-200);
 }
 
+h1,
+main>p,
+.product-actual-price {
+    padding-bottom: 2rem;
 
-/* // cart area  */
+}
+
+/* nav  */
+.navbar-brand {
+    padding-right: 2rem;
+}
+
+.navbar-collapse {
+    align-items: baseline;
+}
+
+.nav-item {
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid transparent;
+}
+
+
+/* // hover state  */
+.nav-item:hover {
+    color: var(--clr-neutral-300);
+    font-weight: 700;
+    border-bottom: 4px solid var(--clr-primary-100);
+}
+
+.cart-btn:hover {
+    border: 4px solid var(--clr-primary-100);
+    background-color: var(--clr-neutral-white);
+    color: var(--clr-neutral-100);
+}
+
+.cart-add-btn:hover {
+    color: var(--clr-neutral-100);
+}
+
+.cart-btn:hover img {
+    filter: invert(1);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* // cart area layout desktop */
 .innercontainer {
     gap: 4em;
     padding: 4em;
@@ -119,4 +173,5 @@ input::-webkit-inner-spin-button {
 .pitch {
     width: 50%;
     padding: 4em 0 4em 4em;
+    align-self: center;
 }
