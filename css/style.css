@@ -175,3 +175,43 @@ footer a:hover {
     padding: 4em 0 4em 4em;
     align-self: center;
 }
+
+
+/* // cart items  */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6)
+}
+
+.cart-list-items {
+    padding: 1rem;
+}
+
+.cart-list-items li {
+    display: flex;
+}
+
+.cart-list-items div:nth-child(2) {
+    min-width: 10em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cart-list-items li img {
+    margin: auto;
+    max-width: 100px;
+    margin-right: 2rem;
+}
+
+.checkout {
+    background-color: var(--clr-primary-100);
+    border: 4px solid var(--clr-primary-100);
+    padding: .5rem 2rem;
+    display: block;
+    margin: auto;
+    width: 80%;
+}

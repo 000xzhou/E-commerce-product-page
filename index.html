@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 
+  <script defer src="app.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -70,15 +71,9 @@
           <!-- Dropdown Cart -->
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <h3>Cart</h3>
-            <ul>
-              <li>
-                <p>Img here</p>
-                <p>item one</p>
-                <p>price</p>
-                <img src="images/icon-delete.svg" alt="">
-              </li>
+            <ul data-cart-list class="cart-list-items">
             </ul>
-            <button>checkout</button>
+            <button class="checkout rounded">checkout</button>
           </div>
           <!-- Dropdown Cart -->
         </div>
@@ -131,22 +126,22 @@
       <section class="pitch">
         <div>
           <h2 class="productTitle text-uppercase">Sneaker Company</h2>
-          <h1>Fall Limited Edition Sneakers</h1>
+          <h1 data-item-title>Fall Limited Edition Sneakers</h1>
           <p>
             These low-profile sneakers are your perfect casual wear companion. Featuring a
             durable rubber outer sole, they`ll withstand everything the weather can offer.
           </p>
         </div>
         <div class="discount">
-          <div class="product-discount-price">$125.00</div>
+          <div data-price class="product-discount-price">$125.00</div>
           <div class="product-discount">50%</div>
         </div>
         <div class="product-actual-price">$250.00</div>
         <!-- Add Product -->
-        <button type="button" class="cart-add-btn rounded">-</button>
-        <input type="number" placeholder="0">
-        <button type="button" class="cart-add-btn rounded">+</button>
-        <button class="cart-btn rounded">
+        <button type="button" data-minus class="cart-add-btn rounded">-</button>
+        <input type="number" data-value value="0">
+        <button type="button" data-add class="cart-add-btn rounded">+</button>
+        <button data-add-to-cart class="cart-btn rounded">
           <img src="images/icon-cart.svg" alt="Cart icon">
           Add to cart
         </button>
