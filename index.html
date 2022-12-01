@@ -17,6 +17,8 @@
   <script defer src="app.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
 </head>
 
 <body>
@@ -31,31 +33,33 @@
         <img src="images/icon-menu.svg" alt="open menu">
       </button>
 
-      <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <div class="d-flex">
         <!-- Navbar brand -->
         <a class="navbar-brand mt-2 mt-lg-0" href="#">
           <img src="images/logo.svg" alt="Sneakers">
         </a>
-
+        <!-- Collapsible wrapper -->
         <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Collections</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Men</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Women</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Collections</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
         <!-- Left links -->
       </div>
       <!-- Collapsible wrapper -->
@@ -100,19 +104,19 @@
               </div>
             </div>
             <!-- Thumbnails -->
-            <div class="col-3 mt-3 ">
+            <div class="col-3 mt-3 thumbnails">
               <img data-img src="images/image-product-1.jpg" data-mdb-img="images/image-product-1.jpg"
                 alt="Gallery image 1" class="active w-100 rounded" />
             </div>
-            <div class="col-3 mt-3 ">
+            <div class="col-3 mt-3 thumbnails">
               <img src="images//image-product-2.jpg" data-mdb-img="images//image-product-2.jpg" alt="Gallery image 2"
                 class="w-100 rounded" />
             </div>
-            <div class="col-3 mt-3 ">
+            <div class="col-3 mt-3 thumbnails">
               <img src="images/image-product-3.jpg" data-mdb-img="images/image-product-3.jpg" alt="Gallery image 3"
                 class="w-100 rounded" />
             </div>
-            <div class="col-3 mt-3 ">
+            <div class="col-3 mt-3 thumbnails">
               <img src="images/image-product-4.jpg" data-mdb-img="images/image-product-4.jpg" alt="Gallery image 4"
                 class="w-100 rounded" />
             </div>
@@ -138,13 +142,17 @@
         </div>
         <div class="product-actual-price">$250.00</div>
         <!-- Add Product -->
-        <button type="button" data-minus class="cart-add-btn rounded">-</button>
-        <input type="number" data-value value="0">
-        <button type="button" data-add class="cart-add-btn rounded">+</button>
-        <button data-add-to-cart class="cart-btn rounded">
-          <img src="images/icon-cart.svg" alt="Cart icon">
-          Add to cart
-        </button>
+        <div class="d-flex outer-incument">
+          <div class="incument">
+            <button type="button" data-minus class=" cart-add-btn rounded">-</button>
+            <input type="number" data-value value="0">
+            <button type="button" data-add class="cart-add-btn  rounded ">+</button>
+          </div>
+          <button data-add-to-cart class="cart-btn rounded">
+            <img src="images/icon-cart.svg" alt="Cart icon">
+            Add to cart
+          </button>
+        </div>
         <!-- Add Product -->
       </section>
     </div>

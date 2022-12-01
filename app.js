@@ -81,3 +81,4 @@ function displayCheckout() {
         cartItem.classList.add("some-text")
     }
 }
+
