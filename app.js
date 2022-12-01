@@ -10,6 +10,9 @@ const dropdownCart = document.querySelector(".dropdown-menu")
 const item = document.querySelector("[data-item-title]").textContent
 const cartItem = document.querySelector("[data-cart-list")
 const price = document.querySelector("[data-price]").textContent
+const img = document.querySelector("[data-img]").src
+
+const checkout = document.querySelector("[data-checkout]")
 
 // Change input vaule when clicking + or -
 addNum.addEventListener("click", () => {
@@ -24,70 +27,57 @@ minusNum.addEventListener("click", () => {
     }
 })
 
-//cart function
-class Cart {
-    constructor(item, value) {
-        this.item = item
-        this.value = value
-        this.reset()
-    }
-
-    reset() {
-        valueNum.value = 0
-    }
-    updateDisplay() {
-        const newli = document.createElement("li")
-        cartItem.append(newli)
-        const newdiv = document.createElement("div")
-        const newdiv2 = document.createElement("div")
-        const subdiv = document.createElement("div")
-        const subdiv2 = document.createElement("div")
-
-        newli.append(newdiv)
-        newli.append(newdiv2)
-        newdiv2.append(subdiv)
-        newdiv2.append(subdiv2)
-
-        const productImg = document.createElement('img')
-
-        const productTitle = document.createElement("p")
-        const productAmount = document.createElement("p")
-
-        productImg.src = "images/image-product-1.jpg"
-        productTitle.textContent = item
-        productAmount.textContent = `${price} x ${this.value} $${price.replace('$', '') * this.value}`
-
-        newdiv.append(productImg)
-        subdiv.append(productTitle)
-        subdiv2.append(productAmount)
-        const trashSVG = document.createElement('img')
-        trashSVG.src = "images/icon-delete.svg"
-
-        newli.append(trashSVG)
-    }
-
-}
-
-addToCart.addEventListener("click", () => {
-    if (valueNum.value == 0) {
-        return
-    } else {
-        const cart = new Cart(item, valueNum.value)
-        cart.updateDisplay()
-        cart.reset()
-    }
-})
-
 // display cart
 cartIcon.addEventListener("click", () => {
     dropdownCart.style.display = dropdownCart.style.display == "block" ? "none" : "block"
 
 })
 
-// checkout 
-
-
-// delete items
-document.addEventListener("click", (e) => {
-
+// add to cart
+addToCart.addEventListener("click", () => {
+    if (valueNum.value == 0) {
+        return
+    } else {
+        addItemCart(valueNum.value)
+        displayCheckout()
+        reset()
+    }
 })
+
+function addItemCart(value) {
+    cartItem.innerHTML += `
+    <li>
+    <div>
+    <img class="rounded" src=${img} />
+    </div>
+    <div>
+    <div>
+    ${item}
+    </div>
+    <div>
+    ${price} x ${value} $${price.replace('$', '') * value}.00
+    </div>
+    </div>
+    <img onClick="deleteThis(this)" src="images/icon-delete.svg" />
+    </li>
+    `
+}
+function reset() {
+    valueNum.value = 0
+}
+
+function deleteThis(params) {
+    // how to have the cart not auto close?
+    params.parentElement.remove()
+    displayCheckout()
+}
+
+function displayCheckout() {
+    if (cartItem.getElementsByTagName('li').length > 0) {
+        checkout.style.display = "block"
+        cartItem.classList.remove("some-text")
+    } else {
+        checkout.style.display = "none"
+        cartItem.classList.add("some-text")
+    }
+}
