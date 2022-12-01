@@ -251,10 +251,6 @@ h3 {
         flex-direction: column;
     }
 
-    .thumbnails {
-        display: none;
-    }
-
     .cart-btn {
         width: 90%;
     }
@@ -275,4 +271,9 @@ h3 {
         padding-inline: 1rem;
     }
 
+}
+
+
+.thumbnails img {
+    padding: 0 .5rem;
 }
